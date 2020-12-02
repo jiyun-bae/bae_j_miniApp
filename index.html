@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mini App</title>
+	<link rel="stylesheet" href=css/master.css>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+	<header id="mainHeader" class="row">
+		<h1 class="hidden">Home Page Layout</h1>
+	<main class="container">
+		<nav id="mainNav">
+			<h2 class="hidden">Main Navigation</h2>
+
+		<div id="logo">
+			<img src="images/logo_mini.png" alt="main logo" width="100px">
+		</div>
+			<nav role="navigation">
+				<div id="menuToggle">
+					<input type="checkbox" />
+					<span></span>
+					<span></span>
+					<span></span>
+            <ul id="menu">
+              <li><a href="#">MODELS</a></li>
+              <li><a href="#">TOOLS</a></li>
+              <li><a href="#">DISCOVER</a></li>
+			  <li><a href="#">OWNERS</a></li>
+			  <li><a href="#">PRE-OWNED</a></li>
+			  <li style="float: right;"><a href="">SHOP NOW</a></li>
+			</ul>
+			</div>
+		</section>
+		</nav>
+
+	</header>
+</main>
+		<video width="100%" controls>
+			<source src="videoes/Convertible to Hardtop Transformation.mp4" type="video/mp4">
+			<source src="videoes/Convertible to Hardtop Transformation.ogg" type="video/ogg">
+			Your browser does not support the video tag.
+		  </video>
+
+		  <h1>The new mini countryman</h1>
+		  
+		  <main id="app">
+		  <h2 @click="clickHeader">{{ message }}</h2>
+		  <p>{{anotherMessage}}</p>
+		  <ul>
+            <car-card v-for="car in minicars" :car="car" :key="car.id"></car-card>
+        </ul>
+
+		  <div id="mainContainer">
+		  <!-- <h2>EXPLORE EVERY CORNER.</h2>
+		  <p>Take a closer look at the MINI 3 door and discover every charmingly iconic detail it has to offer.</p> -->
+		  <div class="slideshow-container">
+			<div class="mySlides1">
+			  <img src="images/mini 3 door.jpg" style="width:100%">
+			</div>
+		  
+			<div class="mySlides1">
+			  <img src="images/mini 5 door.jpg" style="width:100%">
+			</div>
+		  
+			<div class="mySlides1">
+			  <img src="images/mini convertible.jpg" style="width:100%">
+			</div>
+		  
+			<div class="mySlides1">
+			  <img src="images/mini countryman ALL4.jpg" style="width:100%">
+			</div>
+
+			<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+		</div>
+	</div>
+</main>
+
+<h3>Shop Current Inventory</h3>
+
+<button class="btn learn"><a href="#">Learn MORE</a></button>
+
+<h1>Discover MINI Advantages</h1>
+
+<div class="polaroidContainer">
+<div class="polaroid">
+  <img src="images/explaincar_1.jpg" alt="explaincar_1" style="width:100%">
+  <div class="Imgcontainer">
+	  <h3>THE FIRST ALL-ELECTRIC MINI.</h3>
+  <p>Free of emissions. Full of passion. Discover the first all-electric MINI and charge ahead into a brighter tomorrow.</p>
+  </div>
+</div>
+
+<div class="polaroid">
+  <img src="images/explaincar_2.jpg" alt="explaincar_2" style="width:100%">
+  <div class="Imgcontainer">
+	<h3>VIRTUAL WALKAROUND VIDEOS.</h3>
+	<p>Explore our full range of MINI models with virtual walkarounds featuring our MINI product specialist.</p>
+  </div>
+</div>
+
+<div class="polaroid">
+	<img src="images/explaincar_3.jpg" alt="explaincar_3" style="width:100%">
+	<div class="Imgcontainer">
+		<h3>MINI SERVICE.</h3>
+	<p>MINI Certified Technicians use specialized equipment and Original MINI Parts.  being serviced right the first time, every time.</p>
+</div>
+</div>
+</div>
+
+<footer id="mainFooter">
+	<h2>let us know if you have issues.</h2>
+		<div class="footerNav">
+			<ul id="information">
+				<li style="float: left;"><a href="#">Contact us-></a></li>
+				<li style="float: right;"><a href="#">Privacy Policy</a></li>
+			</ul>
+		</div>
+		
+	<div class="footerline"></div>
+
+	<section id="footerLogoContainer">
+		<h2 class="hidden">Logo Image</h2>
+		<img src="images/logo_mini.png" alt="Logo" width="100px">
+	</section>
+	<div id="copyright">
+		<p>© 2020 MINI CANADA.</p>
+		</div>
+</footer>
+
+	<script>
+		var slideIndex = [1,1];
+		var slideId = ["mySlides1"]
+		showSlides(1, 0);
+		
+		function plusSlides(n, no) {
+		  showSlides(slideIndex[no] += n, no);
+		}
+		
+		function showSlides(n, no) {
+		  var i;
+		  var x = document.getElementsByClassName(slideId[no]);
+		  if (n > x.length) {slideIndex[no] = 1}    
+		  if (n < 1) {slideIndex[no] = x.length}
+		  for (i = 0; i < x.length; i++) {
+			 x[i].style.display = "none";  
+		  }
+		  x[slideIndex[no]-1].style.display = "block";  
+		}
+		
+		</script>
+		
+		<script src="js/main.js" type="module"></script>
+</body>
+
+</html>

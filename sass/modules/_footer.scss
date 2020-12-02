@@ -1,0 +1,32 @@
+#mainFooter {
+    background-color: slategray;
+    height: 200px;
+    text-align: center;
+
+    p, h2 {
+        color: white;
+    }
+
+    p {font-size: 10px;}
+
+    h2 { font-size: 30px; padding-top: 20px;}
+
+    ul {
+        list-style-type: none;
+    }
+    
+    li {
+        
+    
+        a {
+            color: black;
+            padding-right: 30px;
+            text-decoration: none;
+        }
+
+    }
+}
+
+.footerNav {
+    height: 40px;
+}

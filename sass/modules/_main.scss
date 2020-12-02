@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    border: 0;
+    background-color: white;
+}
+
+* {box-sizing: border-box}
+.mySlides1 {display: none}
+img {vertical-align: middle;}
+
+a {
+    text-decoration: none;
+    transition:all .1s linear 0s;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  font-size: 30px;
+}
+
+h1 {
+  font-size: 35px;
+  text-align: center;
+  color: slategray;
+}
+
+p {
+  text-align: center;
+  font-size: 15px;
+}
+
+.hidden { display: none; }
+
+#logo {
+  margin-top: 15px;
+  margin-right: 10px;
+  text-align: right;
+}
+
+video {
+  display: none;
+}
